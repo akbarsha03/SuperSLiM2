@@ -3,11 +3,11 @@ apply plugin: 'bintray-release'
 apply plugin: 'jacoco'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "22.0.1"
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
     defaultConfig {
         minSdkVersion 9
-        targetSdkVersion 21
+        targetSdkVersion 23
         versionCode 1
         versionName '0.4'
     }
@@ -16,9 +16,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-	debug {
-	    testCoverageEnabled true
-	}
+        debug {
+            testCoverageEnabled true
+        }
     }
     productFlavors {
     }
@@ -30,7 +30,7 @@ repositories {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:recyclerview-v7:22.1.1'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
 
     testCompile "junit:junit:4.12"
     testCompile "org.mockito:mockito-core:2.0.7-beta"
